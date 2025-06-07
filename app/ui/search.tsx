@@ -15,6 +15,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     console.log(`Searching... ${value}`);
 
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1'); // when the user types a new search query, we want to reset the page number to 1
 
     if (value) {
       params.set('query', value);
